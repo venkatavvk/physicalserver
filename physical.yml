@@ -3,28 +3,28 @@
   tasks:
   - win_dns_client:
      
-	 adapter_names: '*'
+adapter_names: '*'
 
 #we need to take input from service now and validate the ip address 	  
       
-	  ipv4_addresses: 192.168.16.133
+ipv4_addresses: 192.168.16.133
 
   - win_domain_membership:
 
 #providing the domain names in the portal page it self
      
-	 dns_domain_name: tech.in <http://tech.in> 
+dns_domain_name: tech.in <http://tech.in> 
 
 #need to take input from service now portal itself	  
     
-	hostname: newhosts3
+hostname: newhosts3
 
 #we need use ansible vault to store the username and password 	  
       
-	  domain_admin_user: tech0\administrator
-      domain_admin_password: admin@123
-      state: domain
-    register: dmout
+domain_admin_user: tech0\administrator
+domain_admin_password: admin@123
+state: domain
+register: dmout
 
   - win_reboot:
     when: dmout.reboot_required
