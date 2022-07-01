@@ -11,7 +11,7 @@
       domain_admin_user: tech/administrator 
       domain_admin_password: admin@123
       state: domain
-register: dmout
+    register: dmout
 
   - win_reboot:
     when: dmout.reboot_required
