@@ -1,5 +1,5 @@
-#- hosts: win
- # gather_facts: no 
+- hosts: win
+  gather_facts: no 
   tasks:
   - win_dns_client:
      adapter_names: '*'
