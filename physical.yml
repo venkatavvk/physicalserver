@@ -3,7 +3,7 @@
   tasks:
   - win_dns_client:
      adapter_names: '*'
-     ipv4_addresses: 192.168.1.133
+     ipv4_addresses: 192.168.16.134
 
   - win_domain_membership:
       dns_domain_name: tech.in
